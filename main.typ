@@ -2,7 +2,7 @@
 
 
 #import "template.typ": *
-#show: ATLAS-document.with(
+#show: ATEON-document.with(
   title: "TITLE",
   information: [],
   footer-title: "FOOTER-TITLE",
@@ -48,11 +48,11 @@
 #pagebreak()
 
 = Part 1
-#figure(caption: [ATLAS figure])[
+#figure(caption: [ATEON figure])[
   #if (dark-george){
-    image("assets/ATLAS-logo/ATLAS-logo-full-light.svg",width: 60%)
+    image("assets/ATEON-logo/ATEON-logo-full-light.svg",width: 60%)
   } else {
-    image("assets/ATLAS-logo/ATLAS-logo-full-dark.svg",width: 60%)
+    image("assets/ATEON-logo/ATEON-logo-full-dark.svg",width: 60%)
   }
 ]
 == Part 1.1

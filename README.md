@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Typst" src="./.github/assets/ATLAS-banner-light.png">
+  <img alt="Typst" src="./.github/assets/ATEON-banner-light.png">
 </p>
 
 
@@ -28,16 +28,16 @@
 
 <table>
   <tr>
-    <td><img src="./.github/assets/Template ATLAS-1-dark.png"/></td>
-    <td><img src="./.github/assets/Template ATLAS-2-dark.png"/></td>
-    <td><img src="./.github/assets/Template ATLAS-3-dark.png"/></td>
-    <td><img src="./.github/assets/Template ATLAS-4-dark.png"/></td>
+    <td><img src="./.github/assets/template-ateon-dark-1.png"/></td>
+    <td><img src="./.github/assets/template-ateon-dark-2.png"/></td>
+    <td><img src="./.github/assets/template-ateon-dark-3.png"/></td>
+    <td><img src="./.github/assets/template-ateon-dark-4.png"/></td>
   </tr>
   <tr>
-    <td><img src="./.github/assets/Template ATLAS-1-light.png"/></td>
-    <td><img src="./.github/assets/Template ATLAS-2-light.png"/></td>
-    <td><img src="./.github/assets/Template ATLAS-3-light.png"/></td>
-    <td><img src="./.github/assets/Template ATLAS-4-light.png"/></td>
+    <td><img src="./.github/assets/template-ateon-light-1.png"/></td>
+    <td><img src="./.github/assets/template-ateon-light-2.png"/></td>
+    <td><img src="./.github/assets/template-ateon-light-3.png"/></td>
+    <td><img src="./.github/assets/template-ateon-light-4.png"/></td>
   </tr>
 </table>
 

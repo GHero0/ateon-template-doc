@@ -1,5 +1,5 @@
 //-------------------------------------
-// ATLAS Paper Template by PIRCA George
+// ATEON Paper Template by PIRCA George
 //-------------------------------------
 
 #import "@preview/codly:1.3.0": *
@@ -42,7 +42,7 @@
 
 
 
-#let ATLAS-document(
+#let ATEON-document(
   title: "TITLE",
   footer-title: "FOOTER-TITLE",
   header-title: "HEADER-TITLE",
@@ -54,73 +54,73 @@
   debug: false,
   body,
 ) = {
-  // ATLAS colors
-  let ATLAS_black = black
-  let ATLAS_white = white
-  let ATLAS_rainbow = gradient.linear(..color.map.rainbow)
+  // ATEON colors
+  let ATEON_black = black
+  let ATEON_white = white
+  let ATEON_rainbow = gradient.linear(..color.map.rainbow)
 
   
   if dark-mode {
-    ATLAS_black = white
-    ATLAS_white = black
+    ATEON_black = white
+    ATEON_white = black
   }
 
-  // ATLAS fonts
-  let ATLAS_font = "TeX Gyre Adventor"
+  // ATEON fonts
+  let ATEON_font = "TeX Gyre Adventor"
 
-  let ATLAS_debug = if (debug) {
-    ATLAS_black
+  let ATEON_debug = if (debug) {
+    ATEON_black
   } else {
-    ATLAS_black.transparentize(100%)
+    ATEON_black.transparentize(100%)
   }
-  let ATLAS_accent = if (funky-mode) {
-    ATLAS_rainbow
+  let ATEON_accent = if (funky-mode) {
+    ATEON_rainbow
   } else {
-    ATLAS_black
+    ATEON_black
   }
 
-  // ATLAS-logos
-  let ATLAS-logo-text(width: auto, height: auto) = {
+  // ATEON-logos
+  let ATEON-logo-text(width: auto, height: auto) = {
     if (dark-mode) {
       image(
-        "assets/ATLAS-logo/ATLAS-logo-text-light.svg",
+        "assets/ATEON-logo/ATEON-logo-text-light.svg",
         width: width,
         height: height,
       )
     } else {
       image(
-        "assets/ATLAS-logo/ATLAS-logo-text-dark.svg",
+        "assets/ATEON-logo/ATEON-logo-text-dark.svg",
         width: width,
         height: height,
       )
     }
   }
-  let ATLAS-logo-full(width: auto, height: auto) = {
+  let ATEON-logo-full(width: auto, height: auto) = {
     if (dark-mode) {
       image(
-        "assets/ATLAS-logo/ATLAS-logo-full-light.svg",
+        "assets/ATEON-logo/ATEON-logo-full-light.svg",
         width: width,
         height: height,
       )
     } else {
       image(
-        "assets/ATLAS-logo/ATLAS-logo-full-dark.svg",
+        "assets/ATEON-logo/ATEON-logo-full-dark.svg",
         width: width,
         height: height,
       )
     }
   }
 
-  let ATLAS-logo-icon(width: auto, height: auto) = {
+  let ATEON-logo-icon(width: auto, height: auto) = {
     if (dark-mode) {
       image(
-        "assets/ATLAS-logo/ATLAS-logo-icon-light.svg",
+        "assets/ATEON-logo/ATEON-logo-icon-light.svg",
         width: width,
         height: height,
       )
     } else {
       image(
-        "assets/ATLAS-logo/ATLAS-logo-icon-dark.svg",
+        "assets/ATEON-logo/ATEON-logo-icon-dark.svg",
         width: width,
         height: height,
       )
@@ -168,8 +168,8 @@
         #place(
           center + horizon,
           // Orbit circle centered in the box
-          circle(radius: orbit-radius, fill: none, stroke: stroke-width + ATLAS_black, circle(
-            fill: ATLAS_black,
+          circle(radius: orbit-radius, fill: none, stroke: stroke-width + ATEON_black, circle(
+            fill: ATEON_black,
             radius: 5pt,
           )),
         )
@@ -177,7 +177,7 @@
           center + horizon,
           dx: cx, // Now these offsets are relative to the center
           dy: cy,
-          circle(radius: planet-radius, fill: ATLAS_black),
+          circle(radius: planet-radius, fill: ATEON_black),
         )
 
       ]
@@ -219,7 +219,7 @@
             // Randomly choose between three sizes (roughly 33% chance each)
             let radius = if random-val < 33 { 1pt } else if random-val < 67 { 2pt } else { 3pt }
             // Center the circle on the grid point by offsetting by the radius
-            place(dx: x - radius, dy: y - radius, circle(radius: radius, fill: ATLAS_black))
+            place(dx: x - radius, dy: y - radius, circle(radius: radius, fill: ATEON_black))
           }
         }
       }
@@ -228,11 +228,11 @@
 
   // Set the document's basic properties.
   set document(title: title)
-  set text(font: ATLAS_font, lang: "en", ATLAS_black)
+  set text(font: ATEON_font, lang: "en", ATEON_black)
   set par(justify: true)
   set heading(numbering: "I.1 )")
   set page(
-    fill: ATLAS_white,
+    fill: ATEON_white,
     margin: (
       top: 2cm,
       left: 1.5cm,
@@ -241,22 +241,22 @@
     ),
     footer: context [
       #if counter(page).get().first() > 1 {
-        line(length: 100%, stroke: 1pt + ATLAS_black)
+        line(length: 100%, stroke: 1pt + ATEON_black)
         v(-.3cm)
         grid(
           columns: (.5fr, auto, .5fr),
           column-gutter: 10pt,
           align: horizon,
-          stroke: 1pt + ATLAS_debug
+          stroke: 1pt + ATEON_debug
         )[
-          #text(size: 9pt, ATLAS_accent, emph(footer-title))
+          #text(size: 9pt, ATEON_accent, emph(footer-title))
         ][
           #align(horizon + center)[
             #moon-progress-indicator
           ]
         ][
           #align(right)[
-            #text(size: 9pt, ATLAS_accent, [_Page #counter(page).display("1 of 1", both: true)_])
+            #text(size: 9pt, ATEON_accent, [_Page #counter(page).display("1 of 1", both: true)_])
           ]
         ]
       }
@@ -267,22 +267,22 @@
           columns: (auto, 1fr),
           column-gutter: 10pt,
           align: horizon,
-          stroke: 1pt + ATLAS_debug
+          stroke: 1pt + ATEON_debug
         )[
-          #ATLAS-logo-text(height: 0.7cm)
+          #ATEON-logo-text(height: 0.7cm)
         ][
-          #align(right)[#text(size: 9pt, ATLAS_accent)[#header-title]]
+          #align(right)[#text(size: 9pt, ATEON_accent)[#header-title]]
         ]
         v(-.3cm)
-        line(length: 100%, stroke: 1pt + ATLAS_black)
+        line(length: 100%, stroke: 1pt + ATEON_black)
       } else {
         grid(
           columns: 1fr,
           column-gutter: 10pt,
           align: horizon,
-          stroke: 1pt + ATLAS_debug,
+          stroke: 1pt + ATEON_debug,
         )[
-          #ATLAS-logo-full()
+          #ATEON-logo-full()
         ]
         v(-1.3cm)
       }
@@ -296,11 +296,11 @@
   grid(
     columns: 1fr,
     rows: (.3fr,1fr, .5fr, 1fr, .5fr),
-    stroke: 1pt + ATLAS_debug,
+    stroke: 1pt + ATEON_debug,
     align: center + horizon,"",
     icons-top,
     block(
-      stroke: 1pt + ATLAS_black.transparentize(50%),
+      stroke: 1pt + ATEON_black.transparentize(50%),
       radius: 8pt,
       inset: 1.5em,
       fill: none,
@@ -321,7 +321,7 @@
   }
 
   show figure: body => {
-    rect(inset: 10pt, radius: 10pt, stroke: ATLAS_black.transparentize(50%), body)
+    rect(inset: 10pt, radius: 10pt, stroke: ATEON_black.transparentize(50%), body)
   }
 
   show figure.caption: it => [
